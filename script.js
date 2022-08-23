@@ -8,20 +8,15 @@ class Hotel {
         this.habitaciones = habitaciones
     }
 }
-const testhotel = [
-    // disponibilidad
-    { single: 3, precio: 10000 }, { doble: 1 }, { triple: 5 }
-]
 
-const hotel1 = new Hotel(1, "Mar del Plata", "Tucumán 2375", testhotel, true)
-const hotel2 = new Hotel(2, "Miramar", "Av. San Martín 1489", testhotel) // false
-const hotel3 = new Hotel(3, "Necochea", "Centenario 144", testhotel, true)
+const hotel1 = new Hotel(1, "Mar del Plata", "Tucumán 2375")
+const hotel2 = new Hotel(2, "Miramar", "Av. San Martín 1489",)
+const hotel3 = new Hotel(3, "Necochea", "Centenario 144")
 const hotel4 = new Hotel(4, "San Bernardo", "La costa 3100", testhotel) // false
 
 const hoteles = [hotel1, hotel2, hotel3, hotel4]
 
 //Habitaciones
-
 class Habitacion {
     constructor(id, nombre) {
         this.id = id
