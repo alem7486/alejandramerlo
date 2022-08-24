@@ -39,7 +39,7 @@ dateControl.setAttribute('min', dateMin)
 
 
 //Validación de la búsqueda
-const idForm = document.getElementById('button-search')
+const idForm = document.getElementById('idForm')
 
 idForm.addEventListener('submit', (evt) => {
 evt.preventDefault()
