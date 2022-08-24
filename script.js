@@ -1,4 +1,5 @@
-const divDetails = document.getElementsByClassName('hotel-details')
+const divDetails = document.getElementById('hotelDetails')
+const buttonSearch = document.getElementById('buttonSearch')
 
 class Hotel {
     constructor(id, nombre, direccion, habitaciones) {
@@ -12,9 +13,11 @@ class Hotel {
 const hotel1 = new Hotel(1, "Mar del Plata", "Tucumán 2375")
 const hotel2 = new Hotel(2, "Miramar", "Av. San Martín 1489",)
 const hotel3 = new Hotel(3, "Necochea", "Centenario 144")
-const hotel4 = new Hotel(4, "San Bernardo", "La costa 3100", testhotel) // false
+// const hotel4 = new Hotel(4, "San Bernardo", "La costa 3100", testhotel) // false
 
-const hoteles = [hotel1, hotel2, hotel3, hotel4]
+// const hoteles = [hotel1, hotel2, hotel3, hotel4]
+const hoteles = [hotel1, hotel2, hotel3]
+
 
 //Habitaciones
 class Habitacion {
@@ -52,9 +55,16 @@ evt.preventDefault()
     let p = document.createElement("p")
 
 
-    divDetails[0].append(`Dirección: ${hotelEncontrado.direccion}`, p)
-    divDetails[0].append(`Habitaciones: ${JSON.stringify(hotelEncontrado.habitaciones)}`, p)
+    divDetails.innerHTML=`
+    Direrccion: ${hotelEncontrado.direccion}`
 
+    // divDetails[0].append(`Dirección: ${hotelEncontrado.direccion}`, p)
+    // divDetails[0].append(`Habitaciones: ${JSON.stringify(hotelEncontrado.habitaciones)}`, p)
+
+})
+
+buttonSearch.addEventListener('click',()=>{
+    divDetails.innerHTML=''
 })
 
 
@@ -63,3 +73,4 @@ const inputText = document.getElementById('inputText')
 inputText.addEventListener("change", () => {
     console.log(inputText.value)
 })
+
