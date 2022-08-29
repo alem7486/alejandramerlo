@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Reserva turismo</title>
+</head>
+
+<header>Turismo Argenlider S.A.</header>
+<body class=""> 
+   <form id="idForm"> 
+        <br> <br> <br>
+            
+        <fieldset class="formulario">
+            
+            <label for="">Seleccione un hotel</label>
+            <select size="1" id="seleccionHotel">
+                <option value="1">Mar del Plata</option>
+                <option value="2">Miramar</option>
+                <option value="3">Necochea</option>
+                <option value="4">San Bernardo</option>
+            </select>
+            <label for="" id="fechaEntrada">Fecha de entrada</label>
+            <input type="date" id="inputDate1">
+            <label for="" id="fechaSalida">Fecha de salida</label>
+            <input type="date">
+            <br> <br>
+            <label for="">Tipo de habitación</label>
+            <select size="1" name="Tipo de habitación" id="seleccionHabitacion">
+                <option value= "1">Simple</option>
+                <option value= "2">Doble</option>
+                <option value= "3">Triple</option>
+                <option value= "4">Múltiple</option>
+            </select>
+           
+            <label for="">Comentarios</label>
+                <input type="text" id="inputText">
+            <br> <br>
+
+           <button id="Buscar" type="submit">Buscar hoteles</button>
+           <button value="Borrar" id="buttonSearch" type="button">Borrar</button>
+          </fieldset>
+          
+          <br>
+          <div class="hotelDetails" id="hotelDetails">
+            
+          </div>
+          
+        </form> 
+        
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
