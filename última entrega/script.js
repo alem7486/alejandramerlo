@@ -24,13 +24,13 @@ idForm.addEventListener('submit', (evt) => {
 //mostrar seleccion
 const select = document.getElementById('seleccionHotel')
 const hotelEncontrado = habitaciones.find((element) => element.id == select.value);
-/*
+
 fetch('https://criptoya.com/api/dolar')
 .then(response => response.json())
 .then(({blue}) => {
 
-  const habitaciones = ${hotelEncontrado.precio}
-*/
+hotelEncontrado.dolar = (hotelEncontrado.precio / blue)
+})
     hotelDetails.innerHTML=`
      
     <div class="card" style="width:16rem">
@@ -38,6 +38,7 @@ fetch('https://criptoya.com/api/dolar')
       <div class="card-body">
         <h6 class="card-title">Habitación ${hotelEncontrado.nombre}</h6>
         <h6 class="card-title">Precio $${hotelEncontrado.precio}</h6>
+        <h6 class="card-title">Precio USD ${hotelEncontrado.dolar}</h6>
         
     
         <p class="card-text">${hotelEncontrado.info}</p>
