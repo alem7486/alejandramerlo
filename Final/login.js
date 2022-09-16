@@ -4,10 +4,13 @@ const pass = document.getElementById("password")
 const formulario = document.getElementById("formulario")
 const parrafo = document.getElementById("alertas")
 
-formulario.addEventListener("click", e=>{
-    
-    e.preventDefault()
-    let alertas = ""
+//formulario.addEventListener("click", e=>{
+
+//  e.preventDefault()
+   function eventoClic(){
+
+   
+let alertas = ""
     let entrar = false
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
     parrafo.innerHTML = ""
@@ -33,4 +36,5 @@ formulario.addEventListener("click", e=>{
         document.getElementById("formulario").submit()
         //parrafo.innerHTML = "Enviado"
     }
-})
+//})
+}

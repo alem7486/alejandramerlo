@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.min.css">
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" referrerpolicy="no-referrer"></script>
     
     <title>Reserva turismo</title>
 
@@ -32,9 +33,9 @@
             </select>
 
             <label for="" id="fechaEntrada">Fecha de entrada</label>
-            <input type="date" id="inputDate1">
+            <input type="date" id="inputDate1" required>
             <label for="" id="fechaSalida">Fecha de salida</label>
-            <input type="date" id="inputDate2">
+            <input type="date" id="inputDate2" required>
             <br> <br>
 
            <button id="Buscar" type="submit">Buscar habitación</button>
@@ -45,7 +46,7 @@
           <div class="hotelDetails" id="hotelDetails">
             
           </div>
-        
+        <div id="datosReserva"></div>
         </form> 
     <br>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga dolores illo facere, reprehenderit natus ullam porro unde in voluptatem, voluptates, quaerat illum. Doloremque architecto at consequuntur quod sit fugiat labore.

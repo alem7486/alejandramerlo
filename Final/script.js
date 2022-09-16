@@ -7,7 +7,7 @@ const hoy = new Date()
 const dateMin = `${hoy.getFullYear()}-0${hoy.getMonth() + 1}-${hoy.getDate()}`
 dateControl.setAttribute('min', dateMin)
 
-const Single = {id: 1, nombre: "Single", precio: 2500, info: "Habitación para dos personas, con camas simples.", imagen: "https://www.hotelsparepublica.com.ar/templates/republica/images/pagina/contenido/habitaciones/ficha/doble/01.jpg"}
+const Single = {id: 1, nombre: "Single", precio: 2500, info: "Habitación para dos personas, con camas simples.", imagen: "img/single.jpg"}
 const Doble = {id: 2, nombre: "Doble", precio: 3500, info: "Habitación para dos personas con cama matrimonial tamaño Queen.", imagen: "https://www.santuariohotel.com/wp-content/uploads/2019/01/GaleriaHabitacion2.jpg"}
 const Triple = {id: 3, nombre: "Triple", precio: 4500, info: "Habitación para tres personas con camas individuales.", imagen: "https://www.santuariohotel.com/wp-content/uploads/2019/01/GaleriaHabitacion3.jpg"}
 const Cuádruple = {id: 4, nombre: "Cuádruple", precio: 5500, info:"Habitación cuádruple con cuatro camas simples, vista a la ciudad.", imagen:"https://www.hotelorlanda.com/wordpress/wp-content/uploads/2014/12/hotelorlanda-roma-cuadruple-730x526.jpg"}
@@ -27,7 +27,6 @@ idForm.addEventListener('submit', (evt) => {
 const select = document.getElementById('seleccionHotel')
 const hotelEncontrado = habitaciones.find((element) => element.id == select.value);
 
-
 fetch('https://criptoya.com/api/dolar')
 .then(response => response.json())
 .then(({blue}) => {
@@ -44,14 +43,42 @@ hotelDetails.innerHTML=`
     
 
     <p class="card-text">${hotelEncontrado.info}</p>
-    <a href="reserva.html" target="_blank" class="btn btn-primary">Reserva</a>
+    <a href="javascript:void(0)" onclick="reservarHotel('${hotelEncontrado}','${hotelEncontrado.id}','${select.value}','${hotelEncontrado.nombre}','${hotelEncontrado.precio}','${hotelEncontrado.dolar.toFixed(2)}')" class="btn btn-primary">Reserva</a>
   </div>
 </div>
 
-    `
+    `    
 })
 
     })
+function reservarHotel(hotelEncontrado,hotelReservadoId,seleccion,nombre,precio,dolar){
+let date1=  document.getElementById("inputDate1").value
+let date2=  document.getElementById("inputDate2").value
+let hotelReservado={
+  idReserva:hotelReservadoId,
+  dateStart:date1,
+  dateEnd:date2,
+  select:seleccion
+}
+
+document.getElementById("datosReserva").innerHTML=`
+ 
+<div class="card" style="width:16rem">
+  <div class="card-body">
+  <h6 class="card-title">A nombre de ${usuarioStorage}</h6>
+    <h6 class="card-title">Habitación ${nombre}</h6>
+    <h6 class="card-title">Fechadeentrada ${moment(date1).format('DD-MM-YYYY')}</h6>
+    <h6 class="card-title">Fechadesalida ${date2}</h6>
+    <h6 class="card-title">Precio $${precio}</h6>
+    <h6 class="card-title">Precio USD ${dolar}</h6>
+    
+  </div>
+</div>
+
+    `    
+  document.getElementById("hotelDetails").innerHTML=''
+  localStorage.setItem('hotelReservado', JSON.stringify(hotelReservado))
+}
 
 localStorage.setItem('eleccion', JSON.stringify(habitaciones))
 
