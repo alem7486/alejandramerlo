@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" referrerpolicy="no-referrer"></script>
+    
+    <title>Reserve su habitación</title>
+
+</head>
+
+<body class="" style="padding: 10px; margin: 10px;">
+    <div>
+    <h4 style="margin: px; padding: 7px;">Bienvenida/o <span id="usuario"></span></h4>
+   <form id="idForm"> 
+        <br> <br> <br>
+            <div>
+        <fieldset class="formulario">
+       
+            <label for="">Seleccione tipo de habitación </label>
+            <select size="1" id="seleccionHotel">
+                <option value="1">Single</option>
+                <option value="2">Doble</option>
+                <option value="3">Triple</option>
+                <option value="4">Cuádruple</option>
+                <option value="5">Múltiple</option>
+            </select>
+
+            <label for="" id="fechaEntrada">Fecha de entrada</label>
+            <input type="date" id="inputDate1" required>
+            <label for="" id="fechaSalida">Fecha de salida</label>
+            <input type="date" id="inputDate2" required>
+            <br> <br>
+
+           <button id="Buscar" type="submit">Buscar habitación</button>
+           <button value="Borrar" id="buttonSearch" type="button">Borrar</button>
+          </fieldset>
+          </div>
+          <br>
+          <div class="hotelDetails" id="hotelDetails">
+            
+          </div>
+        <div id="datosReserva"></div>
+        </form> 
+    <br>
+        
+    <div id="divDolar">
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+ 
+</body>
+</html>
