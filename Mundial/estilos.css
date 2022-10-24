@@ -1,0 +1,234 @@
+.flex-container{
+    margin-bottom: 50px;
+    flex-direction: row;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    position: sticky;
+    justify-content:space-between;
+    background: blue;
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: linear-gradient(0deg, rgba(7, 95, 196, 0.85), rgba(21, 95, 138, 0.85));
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+}
+
+span{
+    padding: 35px;
+}
+
+.logo img{
+    position: absolute;
+    width: 5%;
+    display:grid;
+    padding: 7px;
+
+}
+
+.number{
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.contador1{
+ padding: auto;
+ font-family: 'Poppins', sans-serif;
+ justify-content: center;
+
+}
+
+.contando{
+    display: inline-block;
+   
+}
+
+.palabras{
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+
+}  
+
+body {
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://noticieros.televisa.com/wp-content/uploads/2022/09/fifa-confirma-que-no-habra-venta-de-cerveza-al-interior-de-estadios-de-qatar-2022-pero-si-antes-y-despues-de-los-partidos.jpg);
+    background-size:cover;
+}
+
+
+#formulario{
+    padding: 30px;
+    margin: 30px;
+    width: 260px;
+    margin: auto;
+    box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: flex;
+    background-color:rgba(210, 10, 70, 0.493);
+}
+
+.form{
+    margin: auto;    
+}
+
+#formulario .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+#formulario input{
+    background: none;
+    color: white;
+    font-size: 14px;
+    padding:2px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white; 
+}
+   
+
+#formulario input:focus{ 
+    outline: none;
+    color: rgb(36, 34, 34);
+
+}
+
+#formulario label{
+    color: white;
+    font-size: 14px;
+    font-weight: regular;
+    justify-content: center; 
+}
+
+
+.alertas{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: black;
+    font-size: 13px;
+
+}
+
+#formulario button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background:white;
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: rgba(210,10,70,.85);
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
+.contenedorContando{
+    justify-content: center;
+    display: -webkit-inline-flex;
+    
+}
+
+.contenedorContando ul li{
+    list-style: none;
+    
+} 
+
+.titleContando{
+    font-size: 16px;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    
+}
+
+.subtitleContando{
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+footer .footer{
+    margin-bottom: 70px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    position: sticky;
+}
+
+/* Tamaños de pantallas */
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+    .row,
+    .navbar {
+        flex-direction: column; /*Cambio de horizontal a vertical en ambas clases*/
+    }
+    html{
+        height: 1000px;
+    }
+}
+
+@media (max-width: 584px) {
+     .flex-container .titleContando{
+        font-size: 10px;
+        display: flex;
+        flex: 2 0;
+        
+    }
+
+    .flex-container{
+    justify-content: center;
+    position: sticky;
+    margin:40px;
+    padding: 10px;
+    display: column;
+
+    }
+    
+    .flex-container .subtitleContando{
+        font-size: 12px;
+        align-items:space-between;
+    }
+
+    span{
+        font-size: 12px;
+        font-weight: 500;
+        -webkit-line-clamp: 5;
+        -moz-box-orient: vertical;
+        overflow: hidden;
+        position: absolute;
+        top: -32px; left: 100px;
+
+        
+    }
+
+    form #formulario{
+        width: auto;
+        padding: 10;
+        margin: 10;
+
+    }
+
+    div .contenedorContando{
+        align-items: center;
+    }
+
+    html{
+        height: 1000px;
+    }
+}
